@@ -1,0 +1,8 @@
+# Ignore environment files
+.env
+
+# Ignore cache or temporary files
+__pycache__/
+
+# Ignore model or large files
+*.pkl
