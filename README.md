@@ -51,15 +51,17 @@ This project integrates **Gyroscope sensors**, **ESP32 module**, **Raspberry Pi 
 ```bash 
 git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
-</details> ```
+```
 ### 2️⃣ Create a Virtual Environment (Optional but Recommended)
 ```bash
 python -m venv venv
 source venv/bin/activate  # for Linux/Mac
 venv\Scripts\activate     # for Windows
+```
 ### 3️⃣ Install Required Libraries
 ```bash
-pip install -r requirements.txt
+   pip install -r requirements.txt
+   ```
 ### 4️⃣ Add Your Twilio Credentials
 Create a .env file in the project root directory:
 TWILIO_ACCOUNT_SID=your_account_sid
@@ -72,13 +74,18 @@ RECEIVER_PHONE_NUMBER=+919876543210
 ```bash
 python fall_detection_code.py
 ```
+
+---
+
 ### 🧠 Machine Learning Model
 
 The Random Forest classifier is trained using gyroscope readings.
 1. Predicts if the detected motion corresponds to a fall or normal movement.
 2 .If fall probability > threshold → triggers camera + Twilio alert.
+   
+---
 
-📲 Alert Example
+### 📲 Alert Example
 
 When a fall is detected:
 --Alert: Possible fall detected!
@@ -86,21 +93,29 @@ When a fall is detected:
 --Location: Living Room
 --Timestamp: 2025-10-17 21:15
 
-🧩 Project Architecture
+---
+
+### 🧩 Project Architecture
 Gyroscope → ESP32 → Raspberry Pi 4 → (Camera + ML Model + Twilio API)
                                        ↓
                                    Caretaker via SMS
+
+---
 
 ### 🔒 Security
 1. Sensitive credentials are stored in .env file.
 2. .gitignore includes .env and dataset/image folders.
 3. Network communication is encrypted via Wi-Fi (ESP32 to Raspberry Pi).
 
+---
+
 ### 🧰 Future Enhancements
 1. Integrate Firebase Cloud for data logging.
 2. Add Real-Time Dashboard using Flask + WebSocket.
 3. Use TensorFlow Lite for camera-based fall recognition.
 4. Enable GPS integration for location tracking.
+
+---
 
 ### 🧑‍💻 Author
 Vasanth S S
