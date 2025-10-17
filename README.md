@@ -57,7 +57,7 @@ venv\Scripts\activate     # for Windows
 ```
 ### 3️⃣ Install Required Libraries
 ```bash
-   pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 ### 4️⃣ Add Your Twilio Credentials
 Create a .env file in the project root directory:
@@ -95,9 +95,7 @@ When a fall is detected:
 ---
 
 ## 🧩 Project Architecture
-Gyroscope → ESP32 → Raspberry Pi 4 → (Camera + ML Model + Twilio API)
-                                       ↓
-                                   Caretaker via SMS
+Gyroscope → ESP32 → Raspberry Pi 4 → (Camera + ML Model + Twilio API) → Caretaker via SMS
 ![Work Flow](https://github.com/user-attachments/assets/f68c1334-02e5-478e-a786-cd7ca1727a89)
 
 ---
