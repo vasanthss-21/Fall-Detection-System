@@ -7,8 +7,6 @@ This project integrates **Gyroscope sensors**, **ESP32 module**, **Raspberry Pi 
 
 ## 📸 System Workflow
 
-![Workflow](Work%20Flow.jpg)
-
 ### 🔄 Working Principle
 1. The **Gyroscope sensor** continuously monitors the orientation and acceleration of the subject.
 2. The **ESP32** transmits sensor data wirelessly to the **Raspberry Pi 4**.
@@ -34,13 +32,13 @@ This project integrates **Gyroscope sensors**, **ESP32 module**, **Raspberry Pi 
 
 | Tool / Library | Purpose |
 |----------------|----------|
-| **Python 3.x** | Main programming language |
+| **Python 3** | Main programming language |
 | **OpenCV** | Image processing & camera control |
 | **scikit-learn** | Random Forest model for fall detection |
 | **Twilio API** | Sending SMS alerts |
 | **Flask (optional)** | For creating monitoring dashboard |
-| **ESP-IDF / Arduino IDE** | Programming ESP32 |
-| **Serial / MQTT** | Communication protocol between ESP32 and Pi |
+| **Arduino IDE** | Programming ESP32 |
+| **MQTT** | Communication protocol between ESP32 and Pi |
 
 ---
 
@@ -78,7 +76,7 @@ python fall_detection_code.py
 
 ---
 
-### 🧠 Machine Learning Model
+## 🧠 Machine Learning Model
 
 The Random Forest classifier is trained using gyroscope readings.
    - Predicts if the detected motion corresponds to a fall or normal movement.
@@ -86,31 +84,32 @@ The Random Forest classifier is trained using gyroscope readings.
    
 ---
 
-### 📲 Alert Example
+## 📲 Alert Example
 
 When a fall is detected:
---Alert: Possible fall detected!
---Captured image sent to caretaker.
---Location: Living Room
---Timestamp: 2025-10-17 21:15
+   - Alert: Possible fall detected!
+   - Captured image sent to caretaker.
+   - Location: Living Room
+   - Timestamp: 2025-10-17 21:15
 
 ---
 
-### 🧩 Project Architecture
+## 🧩 Project Architecture
 Gyroscope → ESP32 → Raspberry Pi 4 → (Camera + ML Model + Twilio API)
                                        ↓
                                    Caretaker via SMS
+![Work Flow](https://github.com/user-attachments/assets/f68c1334-02e5-478e-a786-cd7ca1727a89)
 
 ---
 
-### 🔒 Security
+## 🔒 Security
 1. Sensitive credentials are stored in .env file.
 2. .gitignore includes .env and dataset/image folders.
 3. Network communication is encrypted via Wi-Fi (ESP32 to Raspberry Pi).
 
 ---
 
-### 🧰 Future Enhancements
+## 🧰 Future Enhancements
 1. Integrate Firebase Cloud for data logging.
 2. Add Real-Time Dashboard using Flask + WebSocket.
 3. Use TensorFlow Lite for camera-based fall recognition.
@@ -118,7 +117,9 @@ Gyroscope → ESP32 → Raspberry Pi 4 → (Camera + ML Model + Twilio API)
 
 ---
 
-### 🧑‍💻 Author
+## 🧑‍💻 Author
 Vasanth S S
+
 B.E. Electronics and Communication Engineering
+
 Chennai Institute of Technology
