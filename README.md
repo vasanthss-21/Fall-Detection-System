@@ -47,7 +47,6 @@ This project integrates **Gyroscope sensors**, **ESP32 module**, **Raspberry Pi 
 ## 🚀 Setup & Installation
 
 ### 1️⃣ Clone the Repository
-<details>
 ```bash 
 git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
@@ -61,13 +60,15 @@ venv\Scripts\activate     # for Windows
 ### 3️⃣ Install Required Libraries
 ```bash
    pip install -r requirements.txt
-   ```
+```
 ### 4️⃣ Add Your Twilio Credentials
 Create a .env file in the project root directory:
+```bash
 TWILIO_ACCOUNT_SID=your_account_sid
 TWILIO_AUTH_TOKEN=your_auth_token
 TWILIO_PHONE_NUMBER=+1234567890
 RECEIVER_PHONE_NUMBER=+919876543210
+```
 ⚠️ Note: .env is added to .gitignore to protect sensitive credentials.
 
 ### 5️⃣ Run the Python Script
@@ -80,8 +81,8 @@ python fall_detection_code.py
 ### 🧠 Machine Learning Model
 
 The Random Forest classifier is trained using gyroscope readings.
-1. Predicts if the detected motion corresponds to a fall or normal movement.
-2 .If fall probability > threshold → triggers camera + Twilio alert.
+   - Predicts if the detected motion corresponds to a fall or normal movement.
+   - If fall probability > threshold → triggers camera + Twilio alert.
    
 ---
 
